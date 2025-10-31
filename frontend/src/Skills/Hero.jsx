@@ -1,114 +1,214 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const skillsTimeline = [
-  {
-    title: "Frontend & Basics",
-    description: "Learned HTML, CSS, JavaScript and Bootstrap to create responsive web pages.",
-  },
-  {
-    title: "Backend & Full-Stack",
-    description: "Built backend with Node.js and Express. Integrated MongoDB to store dynamic data.",
-  },
-  {
-    title: "React",
-    description: "Used React.js to build SPAs.",
-  }
+    {
+        title: "Tech Stack I Use",
+        description: "MERN Stack (MongoDB, Express.js, React.js, Node.js) for full-stack web development.",
+    },
+    {
+        title: "Frontend & Basics",
+        description: "Learned HTML, CSS, JavaScript and Bootstrap to create responsive web pages.",
+    },
+    {
+        title: "Backend & Full-Stack",
+        description: "Built backend with Node.js and Express. Integrated MongoDB to store dynamic data.",
+    },
+    {
+        title: "React",
+        description: "Used React.js to build SPAs.",
+    },
 ];
 
-const skillsTimeline2 = [
-  {
-    title: "C",
-    description: "Began my journey into coding and problem-solving through C.",
-  },
-  {
-    title: "Java",
-    description: "Learned Java to understand object-oriented programming concepts like classes, inheritance, and interfaces. Mainly use Java from problem solving",
-  },
-  {
-    title: "Python",
-    description: "Explored Python for basic scripting, loops, conditionals.",
-  }
+const dataScienceTimeline = [
+    {
+        title: "Learning Data Science",
+        description: "Currently exploring the field of Data Science to complement my software development background.",
+    },
+    {
+        title: "Tools & Libraries",
+        description: "Working with Python libraries like Pandas, NumPy, Matplotlib, and Scikit-learn for data analysis and machine learning fundamentals.",
+    },
+    {
+        title: "Goals",
+        description: "Aiming to integrate data-driven insights into full-stack applications and build intelligent, analytical web solutions.",
+    },
 ];
 
 const skillsTimeline3 = [
-  {
-    title: "Language used",
-    description: "Mainly use Java to solve problems.",
-  },
-  {
-    title: "Badges",
-    description: "Earned teo badges till now in Leetcode for consistency.",
-  }
+    {
+        title: "Language used",
+        description: "Primarily use Java for DSA and C for understanding low-level problem-solving.",
+    },
+    {
+        title: "Badges",
+        description: "Earned two badges till now in Leetcode for consistency.",
+    },
 ];
 
 function Hero() {
-  return (
-    <section className="skills-container page-pop">
-      <video
-        className="skills-container-video"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="assets/jupiter-rot.mp4" type="video/mp4" />
-      </video>
+    const [count, setCount] = useState(0);
+    const ref = useRef();
+    const hasAnimated = useRef(false);
+    const target = 100;
 
-      <div className="overlay-content">
-        <div className="overlay-box">
-          <h1 className="overlay-title">My Tech Superpowers</h1>
-          <p className="overlay-subtitle">
-            Here’s what’s in my dev toolkit — the tools and technologies that
-            help me bring ideas to life:
-          </p>
-        </div>
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated.current) {
+                    hasAnimated.current = true;
+                    let current = 0;
+                    const step = Math.ceil(target / 100);
+                    const interval = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            setCount(target);
+                            clearInterval(interval);
+                        } else {
+                            setCount(current);
+                        }
+                    }, 20);
+                }
+            },
+            { threshold: 0.5 }
+        );
 
-        <h2 className="mb-5">Web Development</h2>
-        <div className="timeline">
-          {skillsTimeline.map((item, index) => (
-            <div className="timeline-item" key={index}>
-              <div className="timeline-dot" />
-              <div className="timeline-content">
-                <h4>{item.title}</h4>
-                <p className="fs-5">{item.description}</p>
-              </div>
+        if (ref.current) observer.observe(ref.current);
+        return () => {
+            if (ref.current) observer.unobserve(ref.current);
+        };
+    }, [target]);
+
+    return (
+        <section className="skills-container page-pop" style={{ marginTop: "50px" }}>
+            {/* Background video */}
+            <video
+                className="skills-container-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+            >
+                <source src="assets/earth-rot.mp4" type="video/mp4" />
+            </video>
+
+            {/* Overlay */}
+            <div className="overlay-content">
+                <div className="overlay-box">
+                    <h1 className="overlay-title">My Tech Superpowers</h1>
+                    <p className="overlay-subtitle">
+                        Here’s what’s in my dev toolkit — the tools and technologies that
+                        help me bring ideas to life:
+                    </p>
+                </div>
+
+                {/* WEB DEVELOPMENT */}
+                <h2 className="mb-5">Web Development</h2>
+                <div className="timeline">
+                    {skillsTimeline.map((item, index) => (
+                        <div className="timeline-item" key={index}>
+                            <div className="timeline-dot" />
+                            <div className="timeline-content">
+                                <h4>{item.title}</h4>
+                                <p className="fs-5">{item.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* DATA SCIENCE */}
+                <h2 className="mb-5">Data Science</h2>
+                <div className="timeline">
+                    {dataScienceTimeline.map((item, index) => (
+                        <div className="timeline-item" key={index}>
+                            <div className="timeline-dot" />
+                            <div className="timeline-content">
+                                <h4>{item.title}</h4>
+                                <p className="fs-5">{item.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* DSA */}
+                <h2 className="mb-5">Data Structures & Algorithms</h2>
+                <div className="timeline">
+                    {skillsTimeline3.map((item, index) => (
+                        <div className="timeline-item" key={index}>
+                            <div className="timeline-dot" />
+                            <div className="timeline-content">
+                                <h4>{item.title}</h4>
+                                <p className="fs-5">{item.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* DSA Stats */}
+                <div ref={ref} className="dsa-card mt-5">
+                    <h1
+                        className="text-center"
+                        style={{ color: "#ff66c4ff", textShadow: "0 0 20px #000000ff" }}
+                    >
+                        Leetcode Progress
+                    </h1>
+                    <table className="lc-table">
+                        <thead>
+                            <tr>
+                                <th>Problems Solved</th>
+                                <th>Language Used</th>
+                                <th>Maximum Streak</th>
+                                <th>Link <i className="fa-solid fa-arrow-up-right-from-square"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{count}+</td>
+                                <td>Java</td>
+                                <td>19</td>
+                                <td>
+                                    <a href="https://leetcode.com/u/Smukherjee24/" target="_blank" rel="noopener noreferrer">
+                                        Leetcode
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h1
+                        className="text-center"
+                        style={{ color: "#ff66c4ff", textShadow: "0 0 20px #000000ff" }}
+                    >
+                        Courses Done
+                    </h1>
+                    <table className="lc-table">
+                        <thead>
+                            <tr>
+                                <th>Course Name</th>
+                                <th>Institution</th>
+                                <th>Batch</th>
+                                <th>Visit <i className="fa-solid fa-arrow-up-right-from-square"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DSA with Java</td>
+                                <td>Apna College</td>
+                                <td>Alpha Batch</td>
+                                <td><a href="#">Certificate</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Data Science Course</td>
+                                <td>Code With Harry</td>
+                                <td>-</td>
+                                <td><a href="#">Certificate</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-          ))}
-        </div>
-
-        <h2 className="mb-5">Data Structures & Algorithms</h2>
-        <div className="timeline">
-          {skillsTimeline3.map((item, index) => (
-            <div className="timeline-item" key={index}>
-              <div className="timeline-dot" />
-              <div className="timeline-content">
-                <h4>{item.title}</h4>
-                <p className="fs-5">{item.description}</p>
-              </div>
-            </div>
-          ))}
-          <form action="/DSASkills">
-            <button type="submit" className="btn btn-primary explore">Explore more here</button>
-          </form>
-
-
-        </div>
-
-        <h2 className="mb-5">Programmimg Languages</h2>
-        <div className="timeline">
-          {skillsTimeline2.map((item, index) => (
-            <div className="timeline-item" key={index}>
-              <div className="timeline-dot" />
-              <div className="timeline-content">
-                <h4>{item.title}</h4>
-                <p className="fs-5">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 }
 
 export default Hero;

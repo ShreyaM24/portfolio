@@ -4,7 +4,7 @@ import "../assets/App.css";
 import NavBar from '../NavBar';
 import Hero from './Hero';
 import Skills from './Skills';
-import DSASkills from './DSASkills';
+import DSASkills from './Skills';
 import Projects from './Projects';
 import Experience from './Experience';
 import Contact from './Contact';
@@ -22,7 +22,6 @@ function App() {
       </video>
       <NavBar />
       <Hero />
-      <DSASkills />
       <Skills />
       <Projects />
       <Experience />

@@ -6,7 +6,6 @@ import HomePage from './Home/HomePage.jsx';
 import AboutPage from './About me/AboutPage.jsx';
 import ResumePage from './Resume/ResumePage.jsx';
 import ContactPage from './Contact/ContactPage.jsx';
-import DSAPage from './DSASkills/DSAPage.jsx';
 import SkillsPage from './Skills/SkillsPage.jsx';
 
 createRoot(document.getElementById('root')).render(
@@ -16,7 +15,6 @@ createRoot(document.getElementById('root')).render(
       <Route path="/about" element={<AboutPage />} />
       <Route path='/resume' element={<ResumePage />} />
       <Route path='/contact' element={<ContactPage />} />
-      <Route path='/DSASkills' element={<DSAPage />} />
       <Route path='/skills' element={<SkillsPage />} />
     </Routes>
   </Router>
