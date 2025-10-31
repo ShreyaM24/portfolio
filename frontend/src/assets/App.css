@@ -546,9 +546,9 @@ body {
     box-shadow: 0 0 10px #ff66c4aa, 0 0 20px #ff66c4aa;
 }
 
-/*DSA Skills page*/
+/*Skills page*/
 
-.dsa-container {
+.skills-container {
     margin: 150px 50px 50px 50px;
     position: relative;
     min-height: 100vh;
@@ -556,20 +556,24 @@ body {
     overflow-y: auto;
 }
 
-.dsa-container-video {
+.skills-container-video {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
     width: 100vw;
     object-fit: cover;
-    filter: brightness(0.6);
+    filter: brightness(0.4);
 }
 
-.overlay-content {
-    position: relative;
-    z-index: 1;
-    color: white;
+h4{
+    color: #ffb8e4;
+    text-shadow: 0 0 10px #ff52bd;
+}
+
+p{
+    color: ;
+    text-shadow: 0 0 10px rgb(100, 100, 100);
 }
 
 .lc-table {
@@ -598,30 +602,6 @@ body {
 
 .lc-table td a {
     color: #ffb8e4;
-}
-
-/*skills*/
-
-.skills-container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    flex-direction: column;
-}
-
-.skills-container-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    filter: brightness(0.6);
 }
 
 .overlay-content {
