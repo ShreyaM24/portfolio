@@ -4,25 +4,7 @@ function Contact() {
     return (
         <div className="container page-pop">
             <div className="row p-5 align-items-center d-flex">
-                {/* Text Column */}
-                <div className="col-6 text-col">
-                    <h2 className="mb-4">Contact</h2>
-
-                    {/* Full paragraph for desktop/tablet */}
-                    <p className="para desktop-para">
-                        Have an idea, opportunity, or just want to say hello? I'm always open to conversations, 
-                        collaborations, and challenges.
-                        <br /><br />
-                        <i>Click on the planet to reach out. Let’s connect!</i>
-                    </p>
-
-                    {/* Short paragraph for mobile */}
-                    <p className="para mobile-para">
-                        <i>Click the planet to contact me!</i>
-                    </p>
-                </div>
-
-                {/* Planet Column */}
+                {/* Planet Column (moved to left) */}
                 <div className="col-6 text-center">
                     <a href="/contact" className="img-icon">
                         <img 
@@ -31,6 +13,24 @@ function Contact() {
                             className="planet-img"
                         />
                     </a>
+                </div>
+
+                {/* Text Column (moved to right) */}
+                <div className="col-6 text-col">
+                    <h2 className="mb-4">Contact Me</h2>
+
+                    {/* Full paragraph for desktop/tablet */}
+                    <p className="para desktop-para">
+                        Have an idea, opportunity, or just want to say hello? I'm always open to conversations, 
+                        collaborations, and challenges.
+                        <br /><br />
+                        <i>Click on Mars to reach out. Let’s connect!</i>
+                    </p>
+
+                    {/* Short paragraph for mobile */}
+                    <p className="para mobile-para">
+                        <i>Click on Mars to contact me!</i>
+                    </p>
                 </div>
             </div>
         </div>
