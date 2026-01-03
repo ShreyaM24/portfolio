@@ -7,6 +7,7 @@ import AboutPage from './About me/AboutPage.jsx';
 import ResumePage from './Resume/ResumePage.jsx';
 import ContactPage from './Contact/ContactPage.jsx';
 import SkillsPage from './Skills/SkillsPage.jsx';
+import ProjectsPage from './Projects/ProjectsPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <Router>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/resume' element={<ResumePage />} />
       <Route path='/contact' element={<ContactPage />} />
       <Route path='/skills' element={<SkillsPage />} />
+      <Route path='/projects' element={<ProjectsPage />} />
     </Routes>
   </Router>
 )

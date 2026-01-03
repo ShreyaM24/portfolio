@@ -23,7 +23,7 @@ function Skills() {
                 </div>
                 
                 <div className="col-6 text-center">
-                    <a href="/DSASkills" className="img-icon">
+                    <a href="/skills" className="img-icon">
                         <img src="assets/earth.png" alt="earth-icon" className="planet-img" />
                     </a>
                 </div>
