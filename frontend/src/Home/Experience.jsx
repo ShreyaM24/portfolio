@@ -7,7 +7,7 @@ function Experience() {
                 
                 {/* Text Column (moved to left) */}
                 <div className="col-6 text-col">
-                    <h2 className="mb-4">My Experience/ Achievements</h2>
+                    <h2 className="mb-4">My Experience</h2>
 
                     {/* Full paragraph for desktop/tablet */}
                     <p className="para desktop-para">

@@ -69,62 +69,73 @@ export default function ProjectCarousel() {
   const activeProject = projects[current];
 
   return (
-    <div className="carousel-container">
+    <div className="projects-video-wrapper">
 
-      <button className="nav-btn left" onClick={prev}>‹</button>
+      {/* Background Video */}
+      <video
+        className="projects-video-bg"
+        src="/assets/projects-bg.mp4"  // <-- replace with your video path
+        autoPlay
+        muted
+        loop
+      ></video>
 
-      <div className="carousel">
-        {[-1, 0, 1].map((offset) => {
-          const project = projects[getIndex(offset)];
-          return (
-            <div
-              key={project.id}
-              className={`carousel-card ${offset === 0 ? "active" : "inactive"}`}
-            >
-              <div className="image-wrapper">
-                <img src={project.image} alt={project.title} />
+      <div className="carousel-container">
+
+        {/* Navigation Buttons */}
+        <button className="nav-btn left" onClick={prev}>‹</button>
+
+        {/* Carousel */}
+        <div className="carousel">
+          {[-1, 0, 1].map((offset) => {
+            const project = projects[getIndex(offset)];
+            return (
+              <div
+                key={project.id}
+                className={`carousel-card ${offset === 0 ? "active" : "inactive"}`}
+              >
+                <div className="image-wrapper">
+                  <img src={project.image} alt={project.title} />
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <button className="nav-btn right" onClick={next}>›</button>
-
-      <div className="summary">
-
-        <h2 className="title">{activeProject.title}</h2>
-
-        <div className="tech-stack">
-          <p className="tech-text">{activeProject.technologies}</p>
+            );
+          })}
         </div>
 
-        <p>{activeProject.summary}</p>
+        <button className="nav-btn right" onClick={next}>›</button>
 
-        <div className="project-buttons">
+        {/* Project Summary */}
+        <div className="summary">
+          <h2 className="title">{activeProject.title}</h2>
+          <div className="tech-stack">
+            <p className="tech-text">{activeProject.technologies}</p>
+          </div>
+          <p>{activeProject.summary}</p>
 
-          {activeProject.live && (
-            <a href={activeProject.live} target="_blank" rel="noreferrer">
-              <button className="live-btn">Live Demo</button>
+          {/* Buttons */}
+          <div className="project-buttons">
+            {activeProject.live && (
+              <a href={activeProject.live} target="_blank" rel="noreferrer">
+                <button className="live-btn">Live Demo</button>
+              </a>
+            )}
+            <a href={activeProject.github} target="_blank" rel="noreferrer">
+              <button className="github-btn">GitHub</button>
             </a>
-          )}
+          </div>
+        </div>
 
-          <a href={activeProject.github} target="_blank" rel="noreferrer">
-            <button className="github-btn">GitHub</button>
-          </a>
+        <hr className="section-divider" />
 
+        {/* More Projects Description */}
+        <div className="more-projects">
+          <p className="more-text fs-5">
+            These are a few of my major projects, but my development journey goes beyond them. I regularly build smaller practice apps, experiments, and learning projects to strengthen my skills and explore new technologies. <br />
+            You can find all of these on my GitHub and LinkedIn, where I actively share what I’m building and learning. Feel free to check them out to see my growth and work in progress.
+          </p>
         </div>
 
       </div>
-      <hr className="section-divider" />
-      <div className="more-projects">
-
-        <p className="more-text fs-5">
-          These are a few of my major projects, but my development journey goes beyond them. I regularly build smaller practice apps, experiments, and learning projects to strengthen my skills and explore new technologies. <br></br>You can find all of these on my GitHub and LinkedIn, where I actively share what I’m building and learning. Feel free to check them out to see my growth and work in progress.
-        </p>
-
-      </div>
-
     </div>
   );
 }

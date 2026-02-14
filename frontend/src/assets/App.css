@@ -1143,7 +1143,42 @@ p {
         font-size: 15px !important;
     }
 
+    /* MOBILE: show only active project */
+    .carousel-card.inactive {
+        display: none; /* hide side cards */
+    }
+
+    .carousel-card.active {
+        width: 90vw !important;  /* almost full width */
+        max-width: none;
+        aspect-ratio: auto;      
+        transform: translateY(0); 
+        opacity: 1 !important;
+        display: flex;           /* ensure it displays */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-wrapper {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .image-wrapper img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain;  /* fully visible image */
+        border-radius: 12px;
+    }
+
+    .carousel {
+        justify-content: center;
+        gap: 0;
+        padding: 0 5vw;
+    }
 }
+
 
 /* ================= MORE PROJECTS ================= */
 
