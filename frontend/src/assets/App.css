@@ -1113,71 +1113,85 @@ p {
 /* ================= MOBILE ================= */
 
 @media (max-width: 576px) {
+  .nav-btn {
+      position: absolute;
+      top: 42%;
+      transform: translateY(-50%);
+      height: 42px;
+      width: 30px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 50;
+      opacity: 0.9;
+  }
 
-    .nav-btn {
-        position: absolute;
-        top: 42%;
-        transform: translateY(-50%);
-        height: 42px;
-        width: 30px;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        background: rgba(0, 0, 0, 0.45);
-        backdrop-filter: blur(4px);
-        z-index: 50;
-        opacity: 0.9;
-    }
+  .nav-btn.left { left: 10px; }
+  .nav-btn.right { right: 10px; }
 
-    .nav-btn.left {
-        left: 10px;
-    }
+  .more-projects .more-text { font-size: 15px !important; }
 
-    .nav-btn.right {
-        right: 10px;
-    }
+  /* MOBILE: show only active project */
+  .carousel-card.inactive { display: none; }
 
-    .more-projects .more-text {
-        font-size: 15px !important;
-    }
+  .carousel-card.active {
+      width: 90vw !important;
+      max-width: 100%;
+      min-height: 300px; /* ensure the card has height */
+      transform: translateY(0);
+      opacity: 1 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 auto;
+      box-shadow: none; /* remove shadow on mobile */
+  }
 
-    /* MOBILE: show only active project */
-    .carousel-card.inactive {
-        display: none; /* hide side cards */
-    }
+  .image-wrapper {
+      width: 100%;
+      max-height: 60vh; /* adjust as needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: none; /* remove shadow if applied here */
+  }
 
-    .carousel-card.active {
-        width: 90vw !important;  /* almost full width */
-        max-width: none;
-        aspect-ratio: auto;      
-        transform: translateY(0); 
-        opacity: 1 !important;
-        display: flex;           /* ensure it displays */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .image-wrapper img {
+      width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+      display: block;
+      box-shadow: none; /* remove shadow from image */
+  }
 
-    .image-wrapper {
-        width: 100% !important;
-        height: auto !important;
-    }
+  .carousel {
+      justify-content: center;
+      gap: 0;
+      padding: 0 5vw;
+  }
 
-    .image-wrapper img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain;  /* fully visible image */
-        border-radius: 12px;
-    }
+  /* Buttons consistent on mobile */
+  .project-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* equal spacing between buttons */
+      flex-wrap: wrap;
+      margin-top: 15px;
+  }
 
-    .carousel {
-        justify-content: center;
-        gap: 0;
-        padding: 0 5vw;
-    }
+  .project-buttons button {
+      width: 120px; /* consistent width */
+      height: 38px; /* consistent height */
+      font-size: 14px; /* fit small screens */
+  }
 }
+
 
 
 /* ================= MORE PROJECTS ================= */
