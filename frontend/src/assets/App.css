@@ -577,32 +577,38 @@ p{
 }
 
 .lc-table {
-    width: 80vw;
-    height: 20vh;
-    margin: 50px 50px 50px 50px;
-    justify-self: center;
-    font-size: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-size: 1.4rem;
     background: linear-gradient(90deg, #16032796, #8042b685, #a342b665);
     box-shadow: 0 0 20px #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.lc-table th,
+.lc-table td {
+    padding: 14px 12px;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal; 
+}
+
+.lc-table td {
+    color: #ffb8e4;
+}
+
+.lc-table td a {
+    color: #ffb8e4;
 }
 
 .lc-table:hover {
     box-shadow: 0 0 10px #ff66c4aa, 0 0 20px #ff66c4aa;
 }
 
-.lc-table tr {
-    text-align: center;
-}
-
-.lc-table td {
-    text-align: center;
-    color: #ffb8e4;
-}
-
-
-.lc-table td a {
-    color: #ffb8e4;
-}
 
 .overlay-content {
     position: relative;
@@ -690,6 +696,124 @@ p{
     background: #340d2b !important;
     box-shadow: 0 0 10px #ff66c4aa, 0 0 20px #ff66c4aa;
 }
+
+/* =========================
+   TABLET (<= 992px)
+   ========================= */
+
+@media (max-width: 992px) {
+
+    .skills-container{
+        margin:120px 30px 40px 30px;
+    }
+
+    .overlay-content{
+        max-width: 95%;
+        padding: 2rem 0.5rem;
+    }
+
+    .overlay-title{
+        font-size:2.1rem;
+    }
+
+    .overlay-subtitle{
+        font-size:1.05rem;
+    }
+
+    .timeline{
+        padding-left:18px;
+    }
+
+    .timeline-content p{
+        font-size:1rem !important;
+    }
+
+    .lc-table{
+        width:95%;
+        margin:40px auto;
+        font-size:1.3rem;
+    }
+
+}
+
+
+/* =========================
+   MOBILE (<= 576px)
+   ========================= */
+
+@media (max-width: 576px) {
+
+    /* reduce big outer spacing */
+    .skills-container{
+        margin:100px 12px 30px 12px;
+    }
+
+    /* hero box smaller */
+    .overlay-box{
+        padding:25px 18px;
+        margin-bottom:35px;
+    }
+
+    .overlay-title{
+        font-size:1.7rem;
+    }
+
+    .overlay-subtitle{
+        font-size:0.95rem;
+    }
+
+    /* section headings */
+    h2.mb-5{
+        margin-bottom:1.5rem !important;
+        font-size:1.4rem;
+    }
+
+    /* timeline tighter */
+    .timeline{
+        padding-left:14px;
+        border-left:2px solid #ff98d7;
+    }
+
+    .timeline-item{
+        margin-bottom:28px;
+    }
+
+    .timeline-dot{
+        width:12px;
+        height:12px;
+        left:-8px;
+    }
+
+    .timeline-content{
+        margin-left:18px;
+    }
+
+    .timeline-content h4{
+        font-size:1.05rem;
+    }
+
+    .timeline-content p{
+        font-size:0.9rem !important;
+    }
+
+    /* TABLE RESPONSIVE */
+
+     .lc-table{
+        font-size:0.85rem;
+        margin:25px auto;
+    }
+
+    .lc-table th,
+    .lc-table td{
+        padding:8px 6px;
+    }
+
+    .dsa-card h1{
+        font-size:1.25rem !important;
+        margin-top:30px;
+    }
+}
+
 
 /* projects page */
 

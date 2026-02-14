@@ -21,18 +21,16 @@ const skillsTimeline = [
 
 const dataScienceTimeline = [
     {
-        title: "Learning Data Science",
-        description: "Currently exploring the field of Data Science to complement my software development background.",
+        title: "Data Analysis & Machine Learning",
+        description: "Worked with datasets to clean, analyze, and extract meaningful insights using Python-based workflows.",
     },
     {
         title: "Tools & Libraries",
-        description: "Working with Python libraries like Pandas, NumPy, Matplotlib, and Scikit-learn for data analysis and machine learning fundamentals.",
-    },
-    {
-        title: "Goals",
-        description: "Aiming to integrate data-driven insights into full-stack applications and build intelligent, analytical web solutions.",
-    },
+        description: "Used Pandas, NumPy, Matplotlib, and Scikit-learn for data processing, visualization, and building basic predictive models.",
+    }
 ];
+
+
 
 const skillsTimeline3 = [
     {
@@ -49,7 +47,7 @@ function Hero() {
     const [count, setCount] = useState(0);
     const ref = useRef();
     const hasAnimated = useRef(false);
-    const target = 100;
+    const target = 150;
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -185,7 +183,6 @@ function Hero() {
                             <tr>
                                 <th>Course Name</th>
                                 <th>Institution</th>
-                                <th>Batch</th>
                                 <th>Visit <i className="fa-solid fa-arrow-up-right-from-square"></i></th>
                             </tr>
                         </thead>
@@ -193,14 +190,12 @@ function Hero() {
                             <tr>
                                 <td>DSA with Java</td>
                                 <td>Apna College</td>
-                                <td>Alpha Batch</td>
                                 <td><a href="#">Certificate</a></td>
                             </tr>
 
                             <tr>
                                 <td>Data Science Course</td>
                                 <td>Code With Harry</td>
-                                <td>-</td>
                                 <td><a href="#">Certificate</a></td>
                             </tr>
                         </tbody>
