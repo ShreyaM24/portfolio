@@ -336,7 +336,7 @@ body {
 
 @media (max-width: 380px) {
     .footer p {
-        font-size: 12px;   /* smaller text */
+        font-size: 13px !important;   /* smaller text */
     }
 
     .footer .socials {
@@ -701,7 +701,7 @@ p{
   align-items: center;
   position: relative;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-bottom: 40px;
   width: 100%;
 }
@@ -712,23 +712,22 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3vw;                 /* responsive spacing */
+  gap: 3vw;
   transition: 0.4s ease;
   width: 100%;
-  padding: 0 5vw;           /* makes it fill PC width nicely */
+  padding: 0 5vw;
   box-sizing: border-box;
 }
-
 
 /* ================= CARD BASE ================= */
 
 .carousel-card {
 
-  width: 18vw;               /* responsive side size */
+  width: 18vw;
   min-width: 220px;
   max-width: 280px;
 
-  aspect-ratio: 1 / 1;       /* square side cards */
+  aspect-ratio: 1 / 1;
 
   border-radius: 18px;
   overflow: hidden;
@@ -739,7 +738,6 @@ p{
   display: flex;
   flex-direction: column;
 }
-
 
 /* ================= IMAGE WRAPPER ================= */
 
@@ -752,16 +750,14 @@ p{
   border-radius: 18px;
 }
 
-
 /* ================= IMAGE ================= */
 
 .image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit:fill;       /* prevents distortion */
+  object-fit: cover;   /* FIXED (was fill → distortion risk) */
   transition: transform 0.45s ease;
 }
-
 
 /* ================= TITLE ================= */
 
@@ -773,15 +769,13 @@ p{
   color: #ffb6d9;
 }
 
-
 /* ================= ACTIVE CENTER CARD ================= */
 
 .carousel-card.active {
 
-  width: 65vw;              
+  width: 65vw;
   max-width: 1100px;
-
-  aspect-ratio: 20 / 9;     
+  aspect-ratio: 20 / 9;
 
   opacity: 1;
   transform: translateY(-18px);
@@ -792,24 +786,17 @@ p{
     0 0 20px rgba(255,182,217,0.25);
 }
 
-
-/* premium zoom */
-
 .carousel-card.active img{
   transform:scale(1.05);
 }
 
-
 /* ================= SIDE CARDS ================= */
 
 .carousel-card.inactive {
-
   opacity: 0.38;
   transform: scale(0.9);
   pointer-events: none;
 }
-
-
 
 /* ================= NAV BUTTONS ================= */
 
@@ -836,8 +823,6 @@ p{
 .nav-btn.left { left: 18px; }
 .nav-btn.right { right: 18px; }
 
-
-
 /* ================= SUMMARY ================= */
 
 .summary {
@@ -855,13 +840,12 @@ p{
   opacity: 0.9;
 }
 
-
-
 /* ================= VIDEO BACKGROUND ================= */
+
 
 .projects-video-wrapper {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
   overflow: hidden;
 }
 
@@ -885,10 +869,8 @@ p{
 .projects-content {
   position: relative;
   z-index: 1;
-  padding: 120px 0;
+  padding: 80px 0;   /* REDUCED from 120px */
 }
-
-
 
 /* ================= TITLE GLOW ================= */
 
@@ -901,8 +883,6 @@ p{
         0 0 40px #ffb8e4,
         0 0 80px #ffb8e4;
 }
-
-
 
 /* ================= BUTTONS ================= */
 
@@ -920,4 +900,89 @@ p{
 .project-buttons button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #ff66c4aa, 0 0 20px #ff66c4aa;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px){
+
+  .carousel{
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .carousel-card.active{
+    width: 82vw;
+    max-width: none;
+    aspect-ratio: 16/9;
+    transform: translateY(-10px);
+  }
+
+  .carousel-card{
+    min-width: 160px;
+    max-width: 200px;
+    width: 22vw;
+  }
+
+  .nav-btn{
+    height: 90px;
+    width: 38px;
+    font-size: 22px;
+  }
+
+  .summary{
+    max-width: 90vw;
+    padding: 0 20px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 576px){
+
+.nav-btn{
+  position:absolute;
+  top:42%;
+  transform:translateY(-50%);
+  height:42px;
+  width:30px;
+  font-size:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  background:rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+  z-index:50;
+  opacity:0.9;
+}
+
+.nav-btn.left{ left:10px; }
+.nav-btn.right{ right:10px; }
+
+.more-projects .more-text{font-size: 15px !important;}
+
+}
+
+/* ================= MORE PROJECTS ================= */
+
+.more-projects{
+  margin-top:10px;
+  text-align:center;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.more-text{
+  font-size:1rem;
+  line-height:1.7;
+}
+
+.section-divider{
+  width:80%;
+  border:none;
+  height:1px;
+  background:#ff66c4;
+  margin: 40px auto 25px;
 }

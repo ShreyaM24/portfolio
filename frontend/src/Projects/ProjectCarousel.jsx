@@ -82,10 +82,8 @@ export default function ProjectCarousel() {
               className={`carousel-card ${offset === 0 ? "active" : "inactive"}`}
             >
               <div className="image-wrapper">
-                <img src={project.image} alt={project.title}/>
+                <img src={project.image} alt={project.title} />
               </div>
-
-              <h3>{project.title}</h3>
             </div>
           );
         })}
@@ -96,7 +94,7 @@ export default function ProjectCarousel() {
       <div className="summary">
 
         <h2 className="title">{activeProject.title}</h2>
-        
+
         <div className="tech-stack">
           <p className="tech-text">{activeProject.technologies}</p>
         </div>
@@ -118,6 +116,15 @@ export default function ProjectCarousel() {
         </div>
 
       </div>
+      <hr className="section-divider" />
+      <div className="more-projects">
+
+        <p className="more-text fs-5">
+          These are a few of my major projects, but my development journey goes beyond them. I regularly build smaller practice apps, experiments, and learning projects to strengthen my skills and explore new technologies. <br></br>You can find all of these on my GitHub and LinkedIn, where I actively share what I’m building and learning. Feel free to check them out to see my growth and work in progress.
+        </p>
+
+      </div>
+
     </div>
   );
 }
