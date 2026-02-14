@@ -8,6 +8,7 @@ import ResumePage from './Resume/ResumePage.jsx';
 import ContactPage from './Contact/ContactPage.jsx';
 import SkillsPage from './Skills/SkillsPage.jsx';
 import ProjectsPage from './Projects/ProjectsPage.jsx';
+import WanderLust from './Projects/WanderLust.jsx';
 
 createRoot(document.getElementById('root')).render(
   <Router>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/contact' element={<ContactPage />} />
       <Route path='/skills' element={<SkillsPage />} />
       <Route path='/projects' element={<ProjectsPage />} />
+      <Route path='/projects/1' element={<WanderLust />} />
     </Routes>
   </Router>
 )
