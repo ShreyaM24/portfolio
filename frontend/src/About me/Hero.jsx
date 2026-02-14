@@ -28,7 +28,7 @@ function Hero() {
                     <p className='about-para'>
                         Hello! <b><i>I'm Shreya Mukherjee</i></b>, <br /><br />
 
-                        I’m a third-year B.Tech student majoring in
+                        I’m a third-year B.Tech student majoring in &nbsp;
                         <b>Information Technology in Techno Main Salt Lake, Kolkata, West Bengal</b> —
                         <i>part-time coder, full-time curious mind</i>.
                         <br /><br />
