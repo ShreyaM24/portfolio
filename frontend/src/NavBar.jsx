@@ -5,7 +5,7 @@ function NavBar() {
         <div className="nav-container fs-3 px-5 fixed-top">
             <nav className="navbar navbar-expand-lg ">
                 <div className="container-fluid">
-                    <div className="logo"><a href="/" style={{textDecoration:"none"}}><span style={{ color: "white" }}>My</span><span>Portfolio</span></a></div>
+                    <div className="logo"><a href="/" style={{ textDecoration: "none" }}><span style={{ color: "white" }}>My</span><span>Portfolio</span></a></div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -19,7 +19,14 @@ function NavBar() {
                             </li>
 
                             <li className="nav-item px-2">
-                                <a className="nav-link active" aria-current="page" href="/resume">Resume</a>
+                                <a
+                                    className="nav-link active"
+                                    href="/temp-resume.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Resume
+                                </a>
                             </li>
 
                             <li className="nav-item px-2">

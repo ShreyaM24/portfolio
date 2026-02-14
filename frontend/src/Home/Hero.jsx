@@ -17,7 +17,7 @@ function Hero() {
                             <p className="card-text fs-5"><small className="text-body-secondary">a third-year B.Tech student majoring in Information Technology. I’m passionate about . . . </small><a href="/about" className="fs-6" style={{ textDecoration: "none", color: "#ffb8e4" }}>Read more</a></p>
                             <div className="buttons">
                                 <form action="/contact"><button className="btn btn-primary">Contact me</button></form>
-                                <form action="/resume"><button className="btn btn-primary">Resume</button></form>
+                                <form action="/temp-resume.pdf"><button className="btn btn-primary">Resume</button></form>
                             </div>
                         </div>
                     </div>

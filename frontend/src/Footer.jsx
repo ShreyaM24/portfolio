@@ -6,7 +6,6 @@ function Footer() {
             <hr/>
             <p className="fs-5">Turning coffee into code and ideas into impact.<br />Let's build something amazing together!</p>
             <div className="socials">
-                <a href="mailto:shreyamukherjee1517@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/ShreyaM24"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/shreya-mukherjee-29761a33b/"><i class="fab fa-linkedin"></i></a>
             </div>

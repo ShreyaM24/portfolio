@@ -467,35 +467,62 @@ body {
 
 }
 
-/*resume page*/
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
 
-.resume {
-    margin-top: 250px;
-    margin-bottom: 250px;
+  .about{
+    padding: 30px 20px !important;
+  }
+
+  .about-header{
+    font-size: 2.5rem;
+    text-align:center;
+  }
+
+  .about-para{
+    text-align:center;
+    padding:15px !important;
+    font-size: 1rem;
+  }
+
+  .about .buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .me{
+    width:70% !important;
+    margin:20px auto;
+    display:block;
+  }
 }
 
-.resume-btn {
-    background-color: #340d2b;
-    border: #340d2b;
-    color: #ffb8e4;
-    box-shadow: 0px 0px 10px black;
+
+/* ===== TABLET ===== */
+@media (max-width: 992px){
+
+  .about-header{
+    font-size:3.5rem;
+    text-align:center;
+  }
+
+  .about-para{
+    text-align:center;
+  }
+
+  .about .buttons{
+    justify-content:center;
+  }
+
+  .me{
+    width:60% !important;
+    display:block;
+    margin:25px auto;
+  }
+
 }
 
-.resume-btn i {
-    color: #ffb8e4;
-}
-
-.resume-btn:hover {
-    background: #340d2b;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #ff66c4aa, 0 0 20px #ff66c4aa;
-}
-
-.resume-btn:active {
-    background: #340d2b !important;
-    transform: scale(0.98);
-    box-shadow: 0 0 10px #ff66c4aa, 0 0 20px #ff66c4aa;
-}
 
 /*contact page*/
 
