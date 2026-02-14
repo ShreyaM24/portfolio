@@ -14,10 +14,10 @@ function Hero() {
 
                 {/* IMAGE (comes first on mobile, right on desktop) */}
                 <div className='col-lg-5 offset-lg-1 text-center order-1 order-lg-2 mb-4 mb-lg-0'>
-                    <img 
-                        src='assets/me.jpg' 
-                        className='me img-fluid' 
-                        style={{ maxWidth: "420px" }} 
+                    <img
+                        src='assets/me.jpg'
+                        className='me img-fluid'
+                        style={{ maxWidth: "420px" }}
                         alt="Shreya Mukherjee"
                     />
                 </div>
@@ -27,24 +27,26 @@ function Hero() {
 
                     <p className='about-para'>
                         Hello! <b><i>I'm Shreya Mukherjee</i></b>, <br /><br />
-                        I’m a third-year B.Tech student majoring in 
-                        <b> Information Technology in Techno Main Salt Lake, Kolkata, West Bengal</b> — 
-                        <i> part-time coder, full-time curious mind</i>.
+
+                        I’m a third-year B.Tech student majoring in
+                        <b>Information Technology in Techno Main Salt Lake, Kolkata, West Bengal</b> —
+                        <i>part-time coder, full-time curious mind</i>.
                         <br /><br />
 
-                        I'm passionate about building cool stuff that solves real problems. 
+                        I'm passionate about building cool stuff that solves real problems.
                         From writing clean code to debugging like a detective, I enjoy every part of the process.
                         <br /><br />
 
-                        Right now, I’m diving deep into MERN stack, grinding Leetcode, 
-                        and preparing for roles that mix engineering with impact.
+                        Right now, I’m diving deep into the MERN stack, exploring Data Science and machine learning concepts,
+                        grinding Leetcode, and preparing for roles that combine software development with data-driven impact.
                         <br /><br />
 
-                        Off-screen? You’ll catch me binge-watching series, planning travel escapes, 
+                        Off-screen? You’ll catch me binge-watching series, planning travel escapes,
                         or daydreaming about my next getaway.
                         <br /><br />
 
                         Let’s build, break, learn, and laugh — the journey’s just getting started!
+
                     </p>
 
                     {/* BUTTONS OUTSIDE P (IMPORTANT) */}

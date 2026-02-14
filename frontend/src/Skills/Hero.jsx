@@ -190,13 +190,13 @@ function Hero() {
                             <tr>
                                 <td>DSA with Java</td>
                                 <td>Apna College</td>
-                                <td><a href="#">Certificate</a></td>
+                                <td><a href="/dsa.pdf">Certificate</a></td>
                             </tr>
 
                             <tr>
                                 <td>Data Science Course</td>
                                 <td>Code With Harry</td>
-                                <td><a href="#">Certificate</a></td>
+                                <td><a href="/data-science.pdf">Certificate</a></td>
                             </tr>
                         </tbody>
                     </table>
