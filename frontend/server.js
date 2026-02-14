@@ -4,15 +4,14 @@ import { fileURLToPath } from "url";
 
 const app = express();
 
-// Fix __dirname in ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Serve static files from the Vite build
+// Serve static assets
 app.use(express.static(path.join(__dirname, "dist")));
 
-// Always return index.html for SPA routes
-app.get("*", (req, res) => {
+// Catch-all route for SPA
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
