@@ -741,41 +741,6 @@ p{
   transition: transform 0.45s ease;
 }
 
-/* IMAGE ZOOM ON HOVER */
-
-.carousel-card.active:hover img {
-  transform: scale(1.08);
-}
-
-/* HOVER OVERLAY */
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.65)
-  );
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  font-weight: 600;
-  font-size: 18px;
-  letter-spacing: 0.4px;
-  transition: opacity 0.35s ease;
-  text-align: center;
-  padding: 10px;
-  backdrop-filter: blur(2px);
-}
-
-/* SHOW ONLY WHEN CENTER CARD IS HOVERED */
-
-.carousel-card.active:hover .overlay {
-  opacity: 1;
-}
-
 /* TITLE */
 
 .carousel-card h3 {
@@ -879,56 +844,26 @@ p{
   padding: 120px 0;
 }
 
-/*WanderLust*/
-
-.project-page {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-/* VIDEO FULLSCREEN */
-.project-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -2;
-}
-
-/* DARK OVERLAY (makes text readable) */
-.project-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: -1;
-}
-
-/* ACTUAL CONTENT */
-.project-content {
-  position: relative;
-  z-index: 1;
-  padding: 120px 40px;
-  color: white;
-  margin-top: 50px;
-}
-
-.project-content .title {
-    text-align: center;
-    color: #ffb8e4;
+.title {
+    color: #a70e6c;
     text-shadow: 0 0 5px #ff52bd,
         0 0 10px #ff75ca,
         0 0 20px #ff98d7,
         0 0 40px #ffb8e4,
         0 0 80px #ffb8e4;
-    margin-bottom: 20px;
 }
 
-.project-content .project-img {
-    width: 800px;
-    margin-top: 50px;
-    border-radius: 20px;
+.project-buttons button {
+    background-color: #160327;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    font-size: 0.9rem;
+    margin: 10px;
+}
+
+.project-buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ff66c4aa, 0 0 20px #ff66c4aa;
 }
