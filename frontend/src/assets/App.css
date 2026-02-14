@@ -699,7 +699,7 @@ p{
   align-items: center;
   position: relative;
   gap: 20px;
-  margin: 200px 50px 50px 50px;
+  margin: 50px;
 }
 
 .carousel {
@@ -707,6 +707,8 @@ p{
   align-items: center;
   gap: 40px;
 }
+
+/* CARD */
 
 .carousel-card {
   width: 400px;
@@ -716,18 +718,71 @@ p{
   cursor: pointer;
   transition: all 0.4s ease;
   text-align: center;
+  position: relative;
 }
 
-.carousel-card img {
+/* IMAGE WRAPPER (needed for overlay) */
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* IMAGE */
+
+.image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.45s ease;
 }
 
+/* IMAGE ZOOM ON HOVER */
+
+.carousel-card.active:hover img {
+  transform: scale(1.08);
+}
+
+/* 🔥 HOVER OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.65)
+  );
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+  transition: opacity 0.35s ease;
+  text-align: center;
+  padding: 10px;
+  backdrop-filter: blur(2px);
+}
+
+/* SHOW ONLY WHEN CENTER CARD IS HOVERED */
+
+.carousel-card.active:hover .overlay {
+  opacity: 1;
+}
+
+/* TITLE */
+
 .carousel-card h3 {
-  margin-top: 8px;
+  margin-top: 10px;
   color: #ffb6d9;
 }
+
+/* ACTIVE / INACTIVE STATES */
 
 .carousel-card.active {
   transform: scale(1.2);
@@ -740,10 +795,12 @@ p{
   pointer-events: none;
 }
 
+/* NAV BUTTONS */
+
 .nav-btn {
   position: absolute;
   top: 25%;
-  background: rgba(255, 255, 255, 0.356);
+  background: rgba(255, 255, 255, 0.35);
   border: none;
   border-radius: 10%;
   width: 30px;
@@ -751,6 +808,11 @@ p{
   font-size: 26px;
   color: #ffb6d9;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.6);
 }
 
 .nav-btn.left {
@@ -761,18 +823,21 @@ p{
   right: 40px;
 }
 
+/* SUMMARY */
+
 .summary {
   text-align: center;
-  max-width: 400px;
+  max-width: 420px;
 }
 
 .summary h2 {
+  margin-top: 15px;
   color: #ffb6d9;
   margin-bottom: 8px;
 }
 
 .summary p {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .view-more {
@@ -782,13 +847,14 @@ p{
   font-size: 14px;
 }
 
+/* VIDEO BACKGROUND */
+
 .projects-video-wrapper {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
 }
 
-/* Video */
 .projects-video-bg {
   position: fixed;
   inset: 0;
@@ -798,7 +864,6 @@ p{
   z-index: -2;
 }
 
-/* Dark overlay for readability */
 .projects-video-wrapper::before {
   content: "";
   position: fixed;
@@ -807,7 +872,6 @@ p{
   z-index: -1;
 }
 
-/* Carousel content */
 .projects-content {
   position: relative;
   z-index: 1;
