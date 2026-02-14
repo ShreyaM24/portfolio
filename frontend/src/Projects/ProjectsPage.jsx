@@ -17,7 +17,7 @@ function ProjectsPage() {
           muted
           playsInline
         >
-          <source src="/public/assets/jupiter-rot.mp4" type="video/mp4" />
+          <source src="/assets/jupiter-rot.mp4" type="video/mp4" />
         </video>
 
         <div className="projects-content">
