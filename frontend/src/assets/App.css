@@ -590,9 +590,8 @@ body {
 .skills-container {
     margin: 150px 50px 50px 50px;
     position: relative;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    min-height: 100vh;
+    overflow: visible;
 }
 
 .skills-container-video {

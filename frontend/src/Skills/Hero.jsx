@@ -47,7 +47,7 @@ function Hero() {
     const [count, setCount] = useState(0);
     const ref = useRef();
     const hasAnimated = useRef(false);
-    const target = 150;
+    const target = 200;
 
     useEffect(() => {
         const observer = new IntersectionObserver(
