@@ -36,7 +36,7 @@ const projects = [
     title: "Vritti",
     image: "/assets/Vritti.png",
     technologies: "Technologies Used : React, Tailwind CSS, Node, Express, MongoDB, i18next, Recharts, Vite, OpenAI API",
-    live: null,
+    live: "https://vritti-1.onrender.com",
     github: "https://github.com/ShreyaM24/Vritti",
     summary:
       "Vritti, our prototype for the Smart India Hackathon problem statement, is a web-based platform designed to support the mental well-being of students through mood tracking, clinical assessments, AI-guided help, and counsellor integration. It offers anonymous, secure, and stigma-free support to encourage early detection and timely intervention. In this project, I worked as a Backend Developer, where I contributed to building the server-side logic, database handling, and API integration to ensure secure and efficient data management.",
