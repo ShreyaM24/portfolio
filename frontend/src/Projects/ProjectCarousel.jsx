@@ -12,7 +12,7 @@ const projects = [
       "WanderLust is my first full-stack web application, inspired by Airbnb. It’s a travel listing platform where users can explore, filter, and manage stays with interactive maps and responsive UI.",
   },
   {
-    id: 2,
+    id: 4,
     title: "ShreyaGPT",
     image: "/assets/ShreyaGPT.png",
     technologies: "Technologies Used : React, Context API, OpenAI API, Express, MongoDB, CSS",
@@ -22,7 +22,7 @@ const projects = [
       "A full-stack ChatGPT-inspired web application built using the MERN stack and integrated with the OpenAI API.",
   },
   {
-    id: 3,
+    id: 5,
     title: "Zerodha Clone",
     image: "/assets/zerodha.png",
     technologies: "Technologies Used : React, Axios, CSS, Node, Express, MongoDB",
@@ -32,7 +32,7 @@ const projects = [
       "A simplified clone of the Zerodha Kite trading platform, built using the MERN stack. This project focuses on creating a clean, fast, and interactive trading dashboard while exploring fintech concepts like portfolios, positions, and real-time data handling.",
   },
   {
-    id: 4,
+    id: 2,
     title: "Vritti",
     image: "/assets/Vritti.png",
     technologies: "Technologies Used : React, Tailwind CSS, Node, Express, MongoDB, i18next, Recharts, Vite, OpenAI API",
@@ -42,7 +42,7 @@ const projects = [
       "Vritti, our prototype for the Smart India Hackathon problem statement, is a web-based platform designed to support the mental well-being of students through mood tracking, clinical assessments, AI-guided help, and counsellor integration. It offers anonymous, secure, and stigma-free support to encourage early detection and timely intervention. In this project, I worked as a Backend Developer, where I contributed to building the server-side logic, database handling, and API integration to ensure secure and efficient data management.",
   },
   {
-    id: 5,
+    id: 3,
     title: "Project California",
     image: "/assets/Project-california.png",
     technologies: "Technologies Used : Python, Pandas, Scikit-learn, Matplotlib, Numpy, HTML, CSS, Flask",
