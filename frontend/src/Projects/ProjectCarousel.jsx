@@ -53,19 +53,23 @@ const projects = [
   },
 ];
 
+// ✅ added sorted version (ONLY change needed for id-based order)
+const orderedProjects = [...projects].sort((a, b) => a.id - b.id);
+
 export default function ProjectCarousel() {
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   const prev = () =>
-    setCurrent((prev) => (prev - 1 + projects.length) % projects.length);
+    setCurrent((prev) => (prev - 1 + orderedProjects.length) % orderedProjects.length);
+
   const next = () =>
-    setCurrent((prev) => (prev + 1) % projects.length);
+    setCurrent((prev) => (prev + 1) % orderedProjects.length);
 
   const getIndex = (offset) =>
-    (current + offset + projects.length) % projects.length;
+    (current + offset + orderedProjects.length) % orderedProjects.length;
 
-  const activeProject = projects[current];
+  const activeProject = orderedProjects[current];
 
   // Detect mobile screen
   useEffect(() => {
@@ -91,7 +95,7 @@ export default function ProjectCarousel() {
         ) : (
           // DESKTOP/TABLET: render active + side cards
           [-1, 0, 1].map((offset) => {
-            const project = projects[getIndex(offset)];
+            const project = orderedProjects[getIndex(offset)];
             return (
               <div
                 key={project.id}
@@ -130,13 +134,14 @@ export default function ProjectCarousel() {
         </div>
 
       </div>
+
       <hr className="section-divider" />
+
       <div className="more-projects">
-
         <p className="more-text fs-5">
-          These are a few of my major projects, but my development journey goes beyond them. I regularly build smaller practice apps, experiments, and learning projects to strengthen my skills and explore new technologies. <br></br>You can find all of these on my GitHub and LinkedIn, where I actively share what I’m building and learning. Feel free to check them out to see my growth and work in progress.
+          These are a few of my major projects, but my development journey goes beyond them. I regularly build smaller practice apps, experiments, and learning projects to strengthen my skills and explore new technologies. <br></br>
+          You can find all of these on my GitHub and LinkedIn, where I actively share what I’m building and learning. Feel free to check them out to see my growth and work in progress.
         </p>
-
       </div>
 
     </div>
