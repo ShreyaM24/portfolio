@@ -46,7 +46,7 @@ const projects = [
     title: "Project California",
     image: "/assets/Project-california.png",
     technologies: "Technologies Used : Python, Pandas, Scikit-learn, Matplotlib, Numpy, HTML, CSS, Flask",
-    live: null,
+    live: "https://project-california-z0k4.onrender.com",
     github: "https://github.com/ShreyaM24/Project-California",
     summary:
       "Project California is a data science project focused on analyzing and extracting insights from real-world data related to California. The goal of this project is to perform data preprocessing, exploratory data analysis, feature engineering, and model building to derive meaningful conclusions and predictions.",
